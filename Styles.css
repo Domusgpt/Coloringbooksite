@@ -1,0 +1,57 @@
+body {
+    animation: backgroundAnimation 10s infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-color: #e0f7fa; }
+    33% { background-color: #b2ebf2; }
+    66% { background-color: #80deea; }
+    100% { background-color: #e0f7fa; }
+}
+
+nav a img {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+nav a img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.fixed-buy-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: background-color 0.5s;
+}
+
+.interactive-area {
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,0,255,0.5), rgba(255,0,0,0.5), rgba(255,20,147,0));
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    animation: colorChange 5s infinite, glow 2s infinite;
+}
+
+@keyframes colorChange {
+    0% { color: #ff0000; }
+    25% { color: #00ff00; }
+    50% { color: #0000ff; }
+    75% { color: #ffff00; }
+    100% { color: #ff0000; }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff; }
+    50% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 75px #ff00ff; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff; }
+}
