@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Beach Island The Coloring Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center py-6">
+            <h1 class="text-3xl font-bold">Long Beach Island The Coloring Book</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#hero" class="hover:text-blue-500">Home</a></li>
+                    <li><a href="#gallery" class="hover:text-blue-500">Gallery</a></li>
+                    <li><a href="#about" class="hover:text-blue-500">About</a></li>
+                    <li><a href="#testimonials" class="hover:text-blue-500">Testimonials</a></li>
+                    <li><a href="#buy" class="hover:text-blue-500">Buy Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-blue-500 text-white text-center py-20">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-4">Discover the Beauty of Long Beach Island</h2>
+            <p class="text-xl mb-6">A coloring book that captures the essence of Long Beach Island.</p>
+            <a href="#buy" class="bg-white text-blue-500 px-6 py-3 rounded-full font-bold">Buy Now</a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Integrating images from the repository -->
+                <div class="bg-white p-4 shadow rounded-lg">
+                    <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/1000007376.png" alt="Coloring Page 1" class="w-full h-64 object-cover mb-4" onclick="openLightbox(this)">
+                    <h3 class="text-xl font-bold">Coloring Page 1</h3>
+                </div>
+                <div class="bg-white p-4 shadow rounded-lg">
+                    <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/1000007473.png" alt="Coloring Page 2" class="w-full h-64 object-cover mb-4" onclick="openLightbox(this)">
+                    <h3 class="text-xl font-bold">Coloring Page 2</h3>
+                </div>
+                <!-- Add more image blocks here as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-200 py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">About the Book</h2>
+            <p class="text-xl mb-4">"Long Beach Island The Coloring Book" is a beautiful collection of illustrations capturing the essence and charm of Long Beach Island. Perfect for both children and adults, this coloring book provides a relaxing and creative way to enjoy the island's beauty.</p>
+            <p class="text-xl">Created by a local artist, each page is designed with love and attention to detail.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Testimonials</h2>
+            <div class="flex flex-col space-y-6">
+                <blockquote class="bg-white p-6 shadow rounded-lg">
+                    <p class="text-xl">"This coloring book is fantastic! It perfectly captures the beauty of Long Beach Island."</p>
+                    <footer class="mt-4">- Happy Customer</footer>
+                </blockquote>
+                <!-- Add more testimonials as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Now Section -->
+    <section id="buy" class="bg-blue-500 text-white text-center py-20">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Buy Now</h2>
+            <p class="text-xl mb-6">Get your copy of "Long Beach Island The Coloring Book" today for just $10!</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="Phillips.paul.email@gmail.com">
+                <input type="hidden" name="item_name" value="Long Beach Island The Coloring Book">
+                <input type="hidden" name="amount" value="10.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="shipping" value="3.00">
+                <input type="hidden" name="shipping2" value="1.00">
+                <input type="hidden" name="handling" value="0.00">
+                <input type="hidden" name="undefined_quantity" value="1">
+                <input type="hidden" name="shipping_address" value="1">
+                <input type="hidden" name="address_override" value="1">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="no_shipping" value="2">
+                <input type="hidden" name="return" value="YOUR_RETURN_URL">
+                <input type="hidden" name="cancel_return" value="YOUR_CANCEL_URL">
+                <input type="hidden" name="notify_url" value="YOUR_NOTIFY_URL">
+                <button type="submit" class="bg-white text-blue-500 px-6 py-3 rounded-full font-bold">Purchase Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Long Beach Island The Coloring Book. All rights reserved.</p>
+            <p>Follow us on 
+                <a href="#" class="text-blue-500">Facebook</a>, 
+                <a href="#" class="text-blue-500">Instagram</a>, 
+                <a href="#" class="text-blue-500">Twitter</a>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        // Lightbox functionality
+        function openLightbox(img) {
+            document.getElementById('lightbox').style.display = 'block';
+            document.getElementById('lightbox-img').src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
