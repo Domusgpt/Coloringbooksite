@@ -15,21 +15,15 @@
         }
         @keyframes backgroundAnimation {
             0% { background-color: #e0f7fa; }
-            33% { background-color: #b2ebf2; }
-            66% { background-color: #80deea; }
+            33% { background-color: #b2ebf266% { background-color: #80deea; }
             100% { background-color: #e0f7fa; }
         }
-        nav a {
-            transition: transform 0.2s, color 0.2s;
+        nav a img {
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
         }
-        nav a:hover {
+        nav a img:hover {
             transform: scale(1.1);
-            animation: pulse 1s infinite;
-        }
-        @keyframes pulse {
-            0% { color: #00796b; }
-            50% { color: #004d40; }
-            100% { color: #00796b; }
+            filter: brightness(1.2);
         }
         .fixed-buy-button {
             position: fixed;
@@ -104,10 +98,10 @@
             <h1 class="text-3xl font-bold">Long Beach Island The Coloring Book</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="index.html" class="hover:text-blue-500"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/home-button.png" alt="Home"></a></li>
-                    <li><a href="gallery.html" class="hover:text-blue-500"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/gallery_button.png" alt="Gallery"></a></li>
-                    <li><a href="about.html" class="hover:text-blue-500"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/about_button.png" alt="About"></a></li>
-                    <li><a href="index.html#buy" class="hover:text-blue-500"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/longbeahcislandbuybutton.png" alt="Buy Now"></a></li>
+                    <li><a href="index.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/home-button.png" alt="Home"></a></li>
+                    <li><a href="gallery.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/gallery_button.png" alt="Gallery"></a></li>
+                    <li><a href="about.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/about_button.png" alt="About"></a></li>
+                    <li><a href="index.html#buy"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/longbeahcislandbuybutton.png" alt="Buy Now"></a></li>
                 </ul>
             </nav>
         </div>
@@ -139,7 +133,8 @@
         <div class="container mx-auto text-center">
             <p>&copy; 2024 Long Beach Island The Coloring Book. All rights reserved.</p>
             <p>Follow us on 
-                <a href="#" class="text-blue-500">Facebook<a href="#" class="text-blue-500">Instagram</a>, 
+                <a href="#" class="text-blue-500">Facebook</a>, 
+                <a href="#" class="text-blue-500">Instagram</a>, 
                 <a href="#" class="text-blue-500">Twitter</a>.
             </p>
         </div>
@@ -209,6 +204,9 @@
 
         document.addEventListener('mouseleave', function() {
             interactiveArea.style.display = 'none';
+        });
+
+        document.addEventListener('touchend', function()interactiveArea.style.display = 'none';
         });
 
         document.addEventListener('touchend', function() {
