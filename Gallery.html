@@ -7,15 +7,49 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            animation: backgroundAnimation 10s infinite;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-color: #e0f7fa; }
+            33% { background-color: #b2ebf2; }
+            66% { background-color: #80deea; }
+            100% { background-color: #e0f7fa; }
+        }
+        nav a {
+            transition: transform 0.2s, color 0.2s;
+        }
+        nav a:hover {
+            transform: scale(1.1);
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { color: #00796b; }
+            50% { color: #004d40; }
+            100% { color: #00796b; }
+        }
         .fixed-buy-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
             z-index: 1000;
+            transition: background-color 0.5s;
+        }
+        .interactive-area {
+            position: fixed;
+            pointer-events: none;
+            z-index: 999;
+            width: 200px;
+            height: 200px;
+            margin: -100px 0 0 -100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,0,255,0.5), rgba(255,0,0,0.5), rgba(255,20,147,0));
+            display: none;
         }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
+    <div class="interactive-area" id="interactive-area"></div>
     <!-- Header -->
     <header class="bg-white shadow">
         <div class="container mx-auto flex justify-between items-center py-6">
@@ -38,7 +72,6 @@
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-6">Gallery</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Include all the images here -->
                 <div class="bg-white p-4 shadow rounded-lg">
                     <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/1000007376.png" alt="Coloring Page 1" class="w-full h-64 object-cover mb-4" onclick="openLightbox(this)">
                     <h3 class="text-xl font-bold">Coloring Page 1</h3>
@@ -88,7 +121,7 @@
                     <h3 class="text-xl font-bold">Untitled-14 (1)</h3>
                 </div>
                 <div class="bg-white p-4 shadow rounded-lg">
-                    <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/Untitled-15%20(1).png" alt="Untitled-15 (1)" class="w-full h-64 object-cover mb-4" onclick="openLightbox(this)">
+                    <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/Untitled-15%20(1).png<img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/Untitled-15%20(1).png" alt="Untitled-15 (1)" class="w-full h-64 object-cover mb-4" onclick="openLightbox(this)">
                     <h3 class="text-xl font-bold">Untitled-15 (1)</h3>
                 </div>
                 <div class="bg-white p-4 shadow rounded-lg">
@@ -97,10 +130,6 @@
                 </div>
                 <div class="bg-white p-4 shadow rounded-lg">
                     <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/Untitled-2%20(1).png" alt="Untitled-2 (1)" class="w-full h-64 object-cover mb-4" onclick="openLightbox(this)">
-                    <h3 class="text-xl font-bold">Untitled-2 (1)</h3>
-                </div>
-                <div class="bg-white p-4 shadow rounded-lg">
-                    <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/<img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/Untitled-2%20(1).png" alt="Untitled-2 (1)" class="w-full h-64 object-cover mb-4" onclick="openLightbox(this)">
                     <h3 class="text-xl font-bold">Untitled-2 (1)</h3>
                 </div>
                 <div class="bg-white p-4 shadow rounded-lg">
@@ -164,13 +193,14 @@
                     <h3 class="text-xl font-bold">Crab on Beach</h3>
                 </div>
                 <div class="bg-white p-4 shadow rounded-lg">
-                    <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/pallasite2012_A_line_art_of_a_family_building_a_sandcastle_on_t_8ffce20b-ee77-4eff-bd29-d2f6aa0378dd.png" alt="Family Building Sandcastle" class="w-full h-64 object-cover mb-4" onclick="openLightbox(this)">
+                    <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/pallasite2012_A_line_art_of_a_family_building_a_sandcastle_on_t_8ffce20b<img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/pallasite2012_A_line_art_of_a_family_building_a_sandcastle_on_t_8ffce20b-ee77-4eff-bd29-d2f6aa0378dd.png" alt="Family Building Sandcastle" class="w-full h-64 object-cover mb-4" onclick="openLightbox(this)">
                     <h3 class="text-xl font-bold">Family Building Sandcastle</h3>
                 </div>
                 <div class="bg-white p-4 shadow rounded-lg">
                     <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/pallasite2012_A_line_art_of_a_fluke_swimming_near_the_ocean_flo_5e3be2be-4ed3-47b3-ade5-a19beafaf138.png" alt="Fluke Swimming" class="w-full h-64 object-cover mb-4" onclick="openLightbox(this)">
                     <h3 class="text-xl font-bold">Fluke Swimming</h3>
-                </div><div class="bg-white p-4 shadow rounded-lg">
+                </div>
+                <div class="bg-white p-4 shadow rounded-lg">
                     <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/pallasite2012_A_line_art_of_a_horseshoe_crab_on_the_beach_with__44102c1d-d560-45b8-b1da-e0368ce99988.png" alt="Horseshoe Crab" class="w-full h-64 object-cover mb-4" onclick="openLightbox(this)">
                     <h3 class="text-xl font-bold">Horseshoe Crab</h3>
                 </div>
@@ -225,6 +255,29 @@
                 });
             });
             document.querySelector('.lightbox').addEventListener('click', closeLightbox);
+        });
+
+        // Cursor interaction
+        const interactiveArea = document.getElementById('interactive-area');
+        document.addEventListener('mousemove', function(e) {
+            interactiveArea.style.top = e.pageY + 'px';
+            interactiveArea.style.left = e.pageX + 'px';
+            interactiveArea.style.display = 'block';
+        });
+
+        document.addEventListener('touchmove', function(e) {
+            const touch = e.touches[0];
+            interactiveArea.style.top = touch.pageY + 'px';
+            interactiveArea.style.left = touch.pageX + 'px';
+            interactiveArea.style.display = 'block';
+        });
+
+        document.addEventListener('mouseleave', function() {
+            interactiveArea.style.display = 'none';
+        });
+
+        document.addEventListener('touchend', function() {
+            interactiveArea.style.display = 'none';
         });
     </script>
 </body>
