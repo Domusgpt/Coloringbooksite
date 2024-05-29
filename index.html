@@ -60,7 +60,7 @@
                     <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
                     <li><a href="gallery.html" class="hover:text-blue-500">Gallery</a></li>
                     <li><a href="about.html" class="hover:text-blue-500">About</a></li>
-                    <li><a href="index.html#testimonials" class="hover:text-blue-500">Testimonials</a></li>
+                    <li><a href="index.html#video" class="hover:text-blue-500">Video</a></li>
                     <li><a href="index.html#buy" class="hover:text-blue-500">Buy Now</a></li>
                 </ul>
             </nav>
@@ -76,16 +76,12 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20">
+    <!-- Video Section -->
+    <section id="video" class="py-20">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Testimonials</h2>
-            <div class="flex flex-col space-y-6">
-                <blockquote class="bg-white p-6 shadow rounded-lg">
-                    <p class="text-xl">"This coloring book is fantastic! It perfectly captures the beauty of Long Beach Island."</p>
-                    <footer class="mt-4">- Happy Customer</footer>
-                </blockquote>
-                <!-- Add more testimonials as needed -->
+            <h2 class="text-3xl font-bold mb-6">Watch Our Video</h2>
+            <div class="flex justify-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o8vhjeeZKjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -129,12 +125,6 @@
         </div>
     </footer>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
-
     <div class="fixed-buy-button">
         <a href="#buy" class="bg-blue-500 text-white px-4 py-2 rounded-full font-bold">Buy Now</a>
     </div>
@@ -168,8 +158,6 @@
         });
 
         document.addEventListener('touchmove', function(e) {
-            const touch = e.touches[0];
-            interactiveArea.style.top = touch.pagedocument.addEventListener('touchmove', function(e) {
             const touch = e.touches[0];
             interactiveArea.style.top = touch.pageY + 'px';
             interactiveArea.style.left = touch.pageX + 'px';
