@@ -7,15 +7,49 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            animation: backgroundAnimation 10s infinite;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-color: #e0f7fa; }
+            33% { background-color: #b2ebf2; }
+            66% { background-color: #80deea; }
+            100% { background-color: #e0f7fa; }
+        }
+        nav a {
+            transition: transform 0.2s, color 0.2s;
+        }
+        nav a:hover {
+            transform: scale(1.1);
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { color: #00796b; }
+            50% { color: #004d40; }
+            100% { color: #00796b; }
+        }
         .fixed-buy-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
             z-index: 1000;
+            transition: background-color 0.5s;
+        }
+        .interactive-area {
+            position: fixed;
+            pointer-events: none;
+            z-index: 999;
+            width: 200px;
+            height: 200px;
+            margin: -100px 0 0 -100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,0,255,0.5), rgba(255,0,0,0.5), rgba(255,20,147,0));
+            display: none;
         }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
+    <div class="interactive-area" id="interactive-area"></div>
     <!-- Header -->
     <header class="bg-white shadow">
         <div class="container mx-auto flex justify-between items-center py-6">
@@ -26,8 +60,8 @@
                     <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
                     <li><a href="gallery.html" class="hover:text-blue-500">Gallery</a></li>
                     <li><a href="about.html" class="hover:text-blue-500">About</a></li>
-                    <li><a href="#testimonials" class="hover:text-blue-500">Testimonials</a></li>
-                    <li><a href="#buy" class="hover:text-blue-500">Buy Now</a></li>
+                    <li><a href="index.html#testimonials" class="hover:text-blue-500">Testimonials</a></li>
+                    <li><a href="index.html#buy" class="hover:text-blue-500">Buy Now</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,16 +76,12 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20">
+    <!-- Video Section -->
+    <section id="video" class="py-20">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Testimonials</h2>
-            <div class="flex flex-col space-y-6">
-                <blockquote class="bg-white p-6 shadow rounded-lg">
-                    <p class="text-xl">"This coloring book is fantastic! It perfectly captures the beauty of Long Beach Island."</p>
-                    <footer class="mt-4">- Happy Customer</footer>
-                </blockquote>
-                <!-- Add more testimonials as needed -->
+            <h2 class="text-3xl font-bold mb-6">Watch Our Video</h2>
+            <div class="flex justify-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o8vhjeeZKjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -95,12 +125,6 @@
         </div>
     </footer>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
-
     <div class="fixed-buy-button">
         <a href="#buy" class="bg-blue-500 text-white px-4 py-2 rounded-full font-bold">Buy Now</a>
     </div>
@@ -123,6 +147,31 @@
                 });
             });
             document.querySelector('.lightbox').addEventListener('click', closeLightbox);
+        });
+
+        // Cursor interaction
+        const interactiveArea = document.getElementById('interactive-area');
+        document.addEventListener('mousemove', function(e) {
+            interactiveArea.style.top = e.pageY + 'px';
+            interactiveArea.style.left = e.pageX + 'px';
+            interactiveArea.style.display = 'block';
+        });
+
+        document.addEventListener('touchmove', function(e) {
+            const touch = e.touches[0];
+            interactiveArea.style.top = touch.pageY + 'px';
+            interactiveArea.style.left = touch.pageX + 'px';
+            interactiveArea.style.display = 'block';
+        });
+
+        document.addEventListener('mouseleave', function() {
+            interactiveArea.style.display = 'none';
+        });
+
+        document.addEventListener('touchend', function() {
+            interactiveArea.style.display = 'none';
+        });document.addEventListener('touchend', function() {
+            interactiveArea.style.display = 'none';
         });
     </script>
 </body>
