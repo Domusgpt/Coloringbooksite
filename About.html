@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about Long Beach Island The Coloring Book, a beautiful collection of illustrations capturing the essence and charm of Long Beach Island.">
-    <meta name="keywords" content="Long Beach Island, coloring book, Jersey Shore, beach, art, illustrations, family fun">
-    <meta name="author" content="Your Name">
     <title>About - Long Beach Island The Coloring Book</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            animation: backgroundAnimation 10s infinite;
+            animation: backgroundAnimation 10s infinite, scrollColorChange 5s infinite;
         }
         @keyframes backgroundAnimation {
             0% { background-color: #e0f7fa; }
@@ -19,85 +16,46 @@
             66% { background-color: #80deea; }
             100% { background-color: #e0f7fa; }
         }
-        nav a img {
-            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-        }
-        nav a img:hover {
-            transform: scale(1.1);
-            filter: brightness(1.2);
-        }
-        .fixed-buy-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            transition: background-color 0.5s;
-        }
-        .interactive-area {
-            position: fixed;
-            pointer-events: none;
-            z-index: 999;
-            width: 200px;
-            height: 200px;
-            margin: -100px 0 0 -100px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,0,255,0.5), rgba(255,0,0,0.5), rgba(255,20,147,0));
-            display: none;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            animation: colorChange 5s infinite, glow 10s infinite;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-        }
-        @keyframes colorChange {
-            0% { color: #ff0000; }
-            25% { color: #00ff00; }
-            50% { color: #0000ff; }
-            75% { color: #ffff00; }
-            100% { color: #ff0000; }
-        }
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff; }
-            50% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 75px #ff00ff; }
-            100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff; }
+        @keyframes scrollColorChange {
+            0% { background-color: #e0f7fa; }
+            20% { background-color: #f2f7e0; }
+            40% { background-color: #f2e0e0; }
+            60% { background-color: #f2e0f7; }
+            80% { background-color: #e0f7e0; }
+            100% { background-color: #e0f7fa; }
         }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
-    <div class="interactive-area" id="interactive-area"></div>
     <!-- Header -->
-    <header class="bg-white shadow">
+    <header class="bg-white shadow" style="background-image: url('https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/1000007376.png'); background-size: cover;">
         <div class="container mx-auto flex justify-between items-center py-6">
-            <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/palm-tree%20button.png" alt="Cover Image" class="h-16">
+            <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/palm-tree%20button.png" alt="Cover Image" class="h-16">
             <h1 class="text-5xl font-bold text-center mx-auto">Long Beach Island The Coloring Book</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="index.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/home-button.png" alt="Home"></a></li>
-                    <li><a href="gallery.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/gallery_button.png" alt="Gallery"></a></li>
-                    <li><a href="about.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/about_button.png" alt="About"></a></li>
-                    <li><a href="index.html#buy"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/longbeahcislandbuybutton.png" alt="Buy Now"></a></li>
+                    <li><a href="index.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/home-button.png" alt="Home" class="h-8"></a></li>
+                    <li><a href="gallery.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/gallery_button.png" alt="Gallery" class="h-8"></a></li>
+                    <li><a href="about.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/about_button.png" alt="About" class="h-8"></a></li>
+                    <li><a href="index.html#buy"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/longbeachislandbuybutton.png" alt="Buy Now" class="h-8"></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="bg-gray-200 py-20">
+    <!-- Main Content -->
+    <main class="py-20">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">About the Book</h2>
-            <p class="text-xl mb-4">"Long Beach Island The Coloring Book" is a beautiful collection of illustrations capturing the essence and charm of Long Beach Island. Perfect for both children and adults, this coloring book provides a relaxing and creative way to enjoy the island's beauty.</p>
-            <p class="text-xl mb-4">A local's tribute to his home. Created with love and artificial intelligence. May these shores bring you tranquility and harmony.</p>
-            <p class="text-xl">Created by a local artist, each page is designed with love and attention to detail.</p>
-            <div class="flex justify-center mt-6">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/V6PyE5jYLuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="flex justify-center mt-6">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/o8vhjeeZKjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h2 class="text-3xl font-bold mb-6">About Long Beach Island The Coloring Book</h2>
+            <p class="mb-4">A local's tribute to his home. Created with love and artificial intelligence. May these shores bring you tranquility and harmony.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/V6PyE5jYLuU" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-white py-6">
+    <footer class="bg-white py-6" style="background-image: url('https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/1000007473.png'); background-size: cover;">
         <div class="container mx-auto text-center">
             <p>&copy; 2024 Long Beach Island The Coloring Book. All rights reserved.</p>
             <p>Follow us on 
@@ -107,34 +65,5 @@
             </p>
         </div>
     </footer>
-
-    <div class="fixed-buy-button">
-        <a href="index.html#buy" class="bg-blue-500 text-white px-4 py-2 rounded-full font-bold">Buy Now</a>
-    </div>
-
-    <script>
-        // Cursor interaction
-        const interactiveArea = document.getElementById('interactive-area');
-        document.addEventListener('mousemove',document.addEventListener('mousemove', function(e) {
-            interactiveArea.style.top = e.pageY + 'px';
-            interactiveArea.style.left = e.pageX + 'px';
-            interactiveArea.style.display = 'block';
-        });
-
-        document.addEventListener('touchmove', function(e) {
-            const touch = e.touches[0];
-            interactiveArea.style.top = touch.pageY + 'px';
-            interactiveArea.style.left = touch.pageX + 'px';
-            interactiveArea.style.display = 'block';
-        });
-
-        document.addEventListener('mouseleave', function() {
-            interactiveArea.style.display = 'none';
-        });
-
-        document.addEventListener('touchend', function() {
-            interactiveArea.style.display = 'none';
-        });
-    </script>
 </body>
 </html>
