@@ -28,4 +28,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     canvas.addEventListener('mousedown', startPosition);
-    canvas.addEventListener('mouseup', endPosition);
+    canvas.addEventListener('mouseup', endPosition);canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseleave', endPosition);
+
+    // Touch events for mobile devices
+    canvas.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        startPosition(touch);
+    });
+    canvas.addEventListener('touchend', endPosition);
+    canvas.addEventListener('touchmove', (e) => {
+        const touch = e.touches[0];
+        draw(touch);
+    });
+
+    function saveCanvas() {
+        const link = document.createElement('a');
+        link.download = 'coloring.png';
+        link.href = canvas.toDataURL();
+        link.click();
+    }
+
+    window.saveCanvas = saveCanvas;
+});
