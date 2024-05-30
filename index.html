@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Long Beach Island The Coloring Book is a beautiful collection of illustrations capturing the essence and charm of Long Beach Island.">
-    <meta name="keywords" content="Long Beach Island, coloring book, Jersey Shore, beach, art, illustrations, family fun">
-    <meta name="author" content="Your Name">
     <title>Long Beach Island The Coloring Book</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -45,7 +42,8 @@
             display: none;
         }
         h1, h2, h3, h4, h5, h6 {
-            animation: colorChange 5s infinite, glow 2s infinite;
+            animation: colorChange 5s infinite, glow 10s infinite;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
         }
         @keyframes colorChange {
             0% { color: #ff0000; }
@@ -63,11 +61,10 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
     <div class="interactive-area" id="interactive-area"></div>
-    <!-- Header -->
     <header class="bg-white shadow">
         <div class="container mx-auto flex justify-between items-center py-6">
             <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/palm-tree%20button.png" alt="Cover Image" class="h-16">
-            <h1 class="text-3xl font-bold">Long Beach Island The Coloring Book</h1>
+            <h1 class="text-5xl font-bold text-center mx-auto">Long Beach Island The Coloring Book</h1>
             <nav>
                 <ul class="flex space-x-6">
                     <li><a href="index.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/home-button.png" alt="Home"></a></li>
@@ -78,8 +75,6 @@
             </nav>
         </div>
     </header>
-
-    <!-- Hero Section -->
     <section id="hero" class="bg-cover bg-center text-white text-center py-20" style="background-image: url('https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/pallasite2012_A_double-sided_cover_for_Long_Beach_Island_The_Co_195e8e4b-ee11-4d04-904e-11e35fa839e7.png');">
         <div class="container mx-auto">
             <h2 class="text-4xl font-bold mb-4">Discover the Beauty of Long Beach Island</h2>
@@ -87,8 +82,6 @@
             <a href="#buy" class="bg-white text-blue-500 px-6 py-3 rounded-full font-bold">Buy Now</a>
         </div>
     </section>
-
-    <!-- Buy Now Section -->
     <section id="buy" class="bg-blue-500 text-white text-center py-20">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold mb-6">Buy Now</h2>
@@ -114,38 +107,32 @@
             </form>
         </div>
     </section>
-
-    <!-- Footer -->
     <footer class="bg-white py-6">
         <div class="container mx-auto text-center">
             <p>&copy; 2024 Long Beach Island The Coloring Book. All rights reserved.</p>
             <p>Follow us on 
-                <a href="#" class="text-blue-500">Facebook<a href="#" class="text-blue-500">Facebook</a>, 
+                <a href="#" class="text-blue-500">Facebook</a>, 
                 <a href="#" class="text-blue-500">Instagram</a>, 
                 <a href="#" class="text-blue-500">Twitter</a>.
             </p>
         </div>
     </footer>
-
     <div class="fixed-buy-button">
         <a href="#buy" class="bg-blue-500 text-white px-4 py-2 rounded-full font-bold">Buy Now</a>
     </div>
-
     <script>
         // Lightbox functionality
         function openLightbox(img) {
             document.getElementById('lightbox').style.display = 'block';
             document.getElementById('lightbox-img').src = img.src;
         }
-
         function closeLightbox() {
             document.getElementById('lightbox').style.display = 'none';
         }
-
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.gallery img').forEach(img => {
                 img.addEventListener('click', function() {
-                    openLightbox(this);
+                    openLightopenLightbox(this);
                 });
             });
             document.querySelector('.lightbox').addEventListener('click', closeLightbox);
