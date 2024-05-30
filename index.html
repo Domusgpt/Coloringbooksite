@@ -6,66 +6,30 @@
     <title>Long Beach Island The Coloring Book</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            animation: backgroundAnimation 10s infinite, scrollColorChange 5s infinite;
+    <meta name="description" content="Long Beach Island The Coloring Book - A tribute to the beautiful shores of Long Beach Island. Discover and buy the coloring book created with love and AI.">
+    <meta name="keywords" content="Long Beach Island, Coloring Book, Jersey Shore, Art, AI">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Long Beach Island The Coloring Book",
+        "image": "https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/Cover%202.png",
+        "description": "A tribute to Long Beach Island created with love and artificial intelligence.",
+        "sku": "12345",
+        "brand": {
+            "@type": "Brand",
+            "name": "Local Artist"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://example.com/buy",
+            "priceCurrency": "USD",
+            "price": "10.00",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock"
         }
-        @keyframes backgroundAnimation {
-            0% { background-color: #e0f7fa; }
-            33% { background-color: #b2ebf2; }
-            66% { background-color: #80deea; }
-            100% { background-color: #e0f7fa; }
-        }
-        @keyframes scrollColorChange {
-            0% { background-color: #e0f7fa; }
-            20% { background-color: #f2f7e0; }
-            40% { background-color: #f2e0e0; }
-            60% { background-color: #f2e0f7; }
-            80% { background-color: #e0f7e0; }
-            100% { background-color: #e0f7fa; }
-        }
-        nav a img {
-            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-        }
-        nav a img:hover {
-            transform: scale(1.1);
-            filter: brightness(1.2);
-        }
-        .fixed-buy-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            transition: background-color 0.5s;
-        }
-        .interactive-area {
-            position: fixed;
-            pointer-events: none;
-            z-index: 999;
-            width: 200px;
-            height: 200px;
-            margin: -100px 0 0 -100px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,0,255,0.5), rgba(255,0,0,0.5), rgba(255,20,147,0));
-            display: none;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            animation: colorChange 5s infinite, glow 10s infinite;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-        }
-        @keyframes colorChange {
-            0% { color: #ff0000; }
-            25% { color: #00ff00; }
-            50% { color: #0000ff; }
-            75% { color: #ffff00; }
-            100% { color: #ff0000; }
-        }
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff; }
-            50% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 75px #ff00ff; }
-            100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff; }
-        }
-    </style>
+    }
+    </script>
 </head>
 <body class="bg-gray-100 text-gray-800">
     <div class="interactive-area" id="interactive-area"></div>
@@ -76,10 +40,10 @@
             <h1 class="text-5xl font-bold text-center mx-auto">Long Beach Island The Coloring Book</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="index.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/home-button.png" alt="Home" class="h-8"></a></li>
-                    <li><a href="gallery.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/gallery_button.png" alt="Gallery" class="h-8"></a></li>
-                    <li><a href="about.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/about_button.png" alt="About" class="h-8"></a></li>
-                    <li><a href="index.html#buy"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/longbeachislandbuybutton.png" alt="Buy Now" class="h-8"></a></li>
+                    <li><a href="index.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/home-button.png" alt="Home" class="button-image h-8"></a></li>
+                    <li><a href="gallery.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/gallery_button.png" alt="Gallery" class="button-image h-8"></a></li>
+                    <li><a href="about.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/about_button.png" alt="About" class="button-image h-8"></a></li>
+                    <li><a href="index.html#buy"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/longbeachislandbuybutton.png" alt="Buy Now" class="button-image h-8"></a></li>
                 </ul>
             </nav>
         </div>
@@ -92,8 +56,9 @@
             <div class="video-container mb-8">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/o8vhjeeZKjE" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="canvas-container">
+            <div class="canvas-container relative">
                 <h2 class="text-3xl font-bold mb-6">Interactive Coloring Preview</h2>
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/1000007473.png" class="w-full h-auto absolute top-0 left-0" alt="Coloring Book Page" style="opacity: 0.5;">
                 <canvas id="coloringCanvas" width="600" height="400" style="border:1px solid #000000;"></canvas>
                 <br>
                 <button onclick="saveCanvas()" class="bg-blue-500 text-white px-4 py-2 rounded-full mt-4">Save Your Coloring</button>
