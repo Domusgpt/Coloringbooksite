@@ -39,7 +39,8 @@ nav a img:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    animation: colorChange 5s infinite, glow 2s infinite;
+    animation: colorChange 5s infinite, glow 10s infinite;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 @keyframes colorChange {
