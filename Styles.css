@@ -1,5 +1,7 @@
+/* General styles */
 body {
-    animation: backgroundAnimation 10s infinite;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    animation: backgroundAnimation 10s infinite, scrollColorChange 5s infinite;
 }
 
 @keyframes backgroundAnimation {
@@ -9,37 +11,22 @@ body {
     100% { background-color: #e0f7fa; }
 }
 
-nav a img {
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+@keyframes scrollColorChange {
+    0% { background-color: #e0f7fa; }
+    20% { background-color: #f2f7e0; }
+    40% { background-color: #f2e0e0; }
+    60% { background-color: #f2e0f7; }
+    80% { background-color: #e0f7e0; }
+    100% { background-color: #e0f7fa; }
 }
 
-nav a img:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
+/* Header styles */
+header {
+    background-size: cover;
 }
 
-.fixed-buy-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    transition: background-color 0.5s;
-}
-
-.interactive-area {
-    position: fixed;
-    pointer-events: none;
-    z-index: 999;
-    width: 200px;
-    height: 200px;
-    margin: -100px 0 0 -100px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,0,255,0.5), rgba(255,0,0,0.5), rgba(255,20,147,0));
-    display: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    animation: colorChange 5s infinite, glow 2s infinite;
+header h1 {
+    animation: colorChange 5s infinite, glow 10s infinite;
 }
 
 @keyframes colorChange {
@@ -54,4 +41,83 @@ h1, h2, h3, h4, h5, h6 {
     0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff; }
     50% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 75px #ff00ff; }
     100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff; }
+}
+
+/* Button styles */
+nav a img, .fixed-buy-button a {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+nav a img:hover, .fixed-buy-button a:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.fixed-buy-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: background-color 0.5s;
+}
+
+/* Footer styles */
+footer {
+    background-size: cover;
+}
+
+footer p, footer a {
+    color: #000;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Gallery styles */
+.gallery img {
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        max-width: 100%;
+    }
+}
+
+/* Interactive area styles */
+.interactive-area {
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,0,255,0.5), rgba(255,0,0,0.5), rgba(255,20,147,0));
+    display: none;
+}
+
+/* Canvas container styles */
+.canvas-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.canvas-container canvas {
+    border: 1px solid #000;
 }
