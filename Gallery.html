@@ -60,34 +60,17 @@
             50% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 75px #ff00ff; }
             100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff; }
         }
-        .slideshow-container {
-            position: relative;
-            max-width: 1000px;
-            margin: auto;
+        .gallery img {
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 300px;
+            transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
         }
-        .slides {
-            display: none;
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
+        .gallery img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
         }
     </style>
 </head>
@@ -97,13 +80,13 @@
     <header class="bg-white shadow">
         <div class="container mx-auto flex justify-between items-center py-6">
             <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/palm-tree%20button.png" alt="Cover Image" class="h-16">
-            <h1 class="text-3xl font-bold">Long Beach Island The Coloring Book</h1>
+            <h1 class="text-5xl font-bold text-center mx-auto">Long Beach Island The Coloring Book</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="index.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/home-button.png" alt="Home"></a></li>
-                    <li><a href="gallery.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/gallery_button.png" alt="Gallery"></a></li>
-                    <li><a href="about.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/about_button.png" alt="About"></a></li>
-                    <li><a href="index.html#buy"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/longbeahcislandbuybutton.png" alt="Buy Now"></a></li>
+                    <li><a href="index.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/home-button.png" alt="Home" class="h-8"></a></li>
+                    <li><a href="gallery.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/gallery_button.png" alt="Gallery" class="h-8"></a></li>
+                    <li><a href="about.html"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/about_button.png" alt="About" class="h-8"></a></li>
+                    <li><a href="index.html#buy"><img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/longbeahcislandbuybutton.png" alt="Buy Now" class="h-8"></a></li>
                 </ul>
             </nav>
         </div>
@@ -113,25 +96,88 @@
     <section id="gallery" class="py-20">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-6">Gallery</h2>
-            <div class="slideshow-container">
-                <div class="slides">
-                    <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/1000007376.png" style="width:100%">
-                </div>
-                <div class="slides">
-                    <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/1000007473.png" style="width:100%">
-                </div>
-                <div class="slides">
-                    <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Cover%202.png" style="width:100%">
-                </div>
-                <!-- Add more slides as needed -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="gallery flex flex-wrap justify-center">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/1000007376.png" alt="Image 1">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/1000007473.png" alt="Image 2">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Cover%202.png" alt="Image 3">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%201.png" alt="Image 4">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%202.png" alt="Image 5">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%203.png" alt="Image 6">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%204.png" alt="Image 7">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%205.png" alt="Image 8">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%206.png" alt="Image 9">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%207.png" alt="Image 10">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%208.png" alt="Image 11">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%209.png" alt="Image 12">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2010.png" alt="Image 13">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2011.png" alt="Image 14">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2012.png" alt="Image 15">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2013.png" alt="Image 16">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2014.png" alt="Image 17">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2015.png" alt="Image<img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2015.png" alt="Image 18">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2016.png" alt="Image 19">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2017.png" alt="Image 20">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2018.png" alt="Image 21">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2019.png" alt="Image 22">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2020.png" alt="Image 23">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2021.png" alt="Image 24">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2022.png" alt="Image 25">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2023.png" alt="Image 26">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2024.png" alt="Image 27">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2025.png" alt="Image 28">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2026.png" alt="Image 29">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2027.png" alt="Image 30">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2028.png" alt="Image 31">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2029.png" alt="Image 32">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2030.png" alt="Image 33">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2031.png" alt="Image 34">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2032.png" alt="Image 35">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2033.png" alt="Image 36">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2034.png" alt="Image 37">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2035.png" alt="Image 38">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2036.png" alt="Image 39">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2037.png" alt="Image 40">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2038.png" alt="Image 41">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2039.png" alt="Image 42">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2040.png" alt="Image 43">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2041.png" alt="Image 44">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2042.png" alt="Image 45">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2043.png" alt="Image 46">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2044.png" alt="Image 47">
+                <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/New/Color%20page%2045.png" alt="Image 48">
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white⬤function closeLightbox() {
+    <footer class="bg-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Long Beach Island The Coloring Book. All rights reserved.</p>
+            <p>Follow us on 
+                <a href="#" class="text-blue-500">Facebook</a>, 
+                <a href="#" class="text-blue-500">Instagram</a>, 
+                <a href="#" class="text-blue-500">Twitter</a>.
+            </p>
+        </div>
+    </footer>
+
+    <div class="fixed-buy-button">
+        <a href="index.html#buy" class="bg-blue-500 text-white px-4 py-2 rounded-full font-bold">Buy Now</a>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        // Lightbox functionality
+        function openLightbox(img) {
+            document.getElementById('lightbox').style.display = 'block';
+            document.getElementById('lightbox-img').src = img.src;
+        }
+
+        function closeLightbox() {
             document.getElementById('lightbox').style.display = 'none';
         }
 
@@ -168,4 +214,4 @@
         });
     </script>
 </body>
-        </html>
+</html>
