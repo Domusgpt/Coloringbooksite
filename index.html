@@ -89,8 +89,14 @@
     <main class="py-20">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-6">Discover Long Beach Island</h2>
-            <div class="video-container">
+            <div class="video-container mb-8">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/o8vhjeeZKjE" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="canvas-container">
+                <h2 class="text-3xl font-bold mb-6">Interactive Coloring Preview</h2>
+                <canvas id="coloringCanvas" width="600" height="400" style="border:1px solid #000000;"></canvas>
+                <br>
+                <button onclick="saveCanvas()" class="bg-blue-500 text-white px-4 py-2 rounded-full mt-4">Save Your Coloring</button>
             </div>
         </div>
     </main>
@@ -116,47 +122,6 @@
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
-    <script>
-        // Lightbox functionality
-        function openLightbox(img) {
-            document.getElementById('lightbox').style.display = 'block';
-            document.getElementById('lightbox-img').src = img.src;
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.gallery img').forEach(img => {
-                img.addEventListener('click', function() {
-                    openLightbox(this);
-                });
-            });
-            document.querySelector('.lightbox').addEventListener('click', closeLightbox);
-        });
-
-        // Cursor interaction
-        const interactiveArea = document.getElementById('interactive-area');
-        document.addEventListener('mousemove', function(e) {
-            interactiveArea.style.top = e.pageY + 'px';
-            interactiveArea.style.left = e.pageX + 'px';
-            interactiveArea.style.display = 'block';
-        });
-
-        document.addEventListener('touchmove', function(e) {
-            const touch = e.touches[0];
-            interactiveArea.style.top = touch.pageY + 'px';
-            interactiveArea.style.left = touch.pageX + 'px';
-            interactiveArea.style.display = 'block';
-        });
-
-        document.addEventListener('mouseleave', function() {
-            interactiveArea.style.display = 'none';
-        });
-
-        document.addEventListener('touchend', function() {
-            interactiveArea.style.display = 'none';
-        });
-    </script>
+    <script src="interactive.js"></script>
 </body>
+</html>
