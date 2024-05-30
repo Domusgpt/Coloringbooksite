@@ -3,174 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Long Beach Island The Coloring Book</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Long Beach Island Coloring Book</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            animation: backgroundAnimation 10s infinite;
-        }
-        @keyframes backgroundAnimation {
-            0% { background-color: #e0f7fa; }
-            33% { background-color: #b2ebf2; }
-            66% { background-color: #80deea; }
-            100% { background-color: #e0f7fa; }
-        }
-        nav a {
-            transition: transform 0.2s, color 0.2s;
-        }
-        nav a:hover {
-            transform: scale(1.1);
-            animation: pulse 1s infinite;
-        }
-        @keyframes pulse {
-            0% { color: #00796b; }
-            50% { color: #004d40; }
-            100% { color: #00796b; }
-        }
-        .fixed-buy-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            transition: background-color 0.5s;
-        }
-        .interactive-area {
-            position: fixed;
-            pointer-events: none;
-            z-index: 999;
-            width: 200px;
-            height: 200px;
-            margin: -100px 0 0 -100px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,0,255,0.5), rgba(255,0,0,0.5), rgba(255,20,147,0));
-            display: none;
-        }
-    </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <div class="interactive-area" id="interactive-area"></div>
-    <!-- Header -->
-    <header class="bg-white shadow">
-        <div class="container mx-auto flex justify-between items-center py-6">
-            <img src="https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/pallasite2012_A_double-sided_cover_for_Long_Beach_Island_The_Co_195e8e4b-ee11-4d04-904e-11e35fa839e7.png" alt="Cover Image" class="h-16">
-            <h1 class="text-3xl font-bold">Long Beach Island The Coloring Book</h1>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
-                    <li><a href="gallery.html" class="hover:text-blue-500">Gallery</a></li>
-                    <li><a href="about.html" class="hover:text-blue-500">About</a></li>
-                    <li><a href="index.html#video" class="hover:text-blue-500">Video</a></li>
-                    <li><a href="index.html#buy" class="hover:text-blue-500">Buy Now</a></li>
-                </ul>
-            </nav>
-        </div>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="buy-now.html">Buy Now</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <!-- Hero Section -->
-    <section id="hero" class="bg-cover bg-center text-white text-center py-20" style="background-image: url('https://raw.githubusercontent.com/Domusgpt/Coloringbooksite/main/pallasite2012_A_double-sided_cover_for_Long_Beach_Island_The_Co_195e8e4b-ee11-4d04-904e-11e35fa839e7.png');">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-4">Discover the Beauty of Long Beach Island</h2>
-            <p class="text-xl mb-6">A coloring book that captures the essence of Long Beach Island.</p>
-            <a href="#buy" class="bg-white text-blue-500 px-6 py-3 rounded-full font-bold">Buy Now</a>
+    <section class="hero">
+        <div class="banner">
+            <h1>Long Beach Island The Coloring Book</h1>
+            <a href="buy-now.html" class="btn">Buy Now</a>
         </div>
     </section>
-
-    <!-- Video Section -->
-    <section id="video" class="py-20">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Watch Our Video</h2>
-            <div class="flex justify-center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/o8vhjeeZKjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </div>
+    <section class="buy-now">
+        <h2>Buy Now</h2>
+        <p>Discover the beauty of Long Beach Island with this unique coloring book.</p>
+        <a href="https://www.paypal.com" class="btn">Buy with PayPal</a>
     </section>
-
-    <!-- Buy Now Section -->
-    <section id="buy" class="bg-blue-500 text-white text-center py-20">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-6">Buy Now</h2>
-            <p class="text-xl mb-6">Get your copy of "Long Beach Island The Coloring Book" today for just $10! Please make sure to leave your shipping address in the notes section during checkout.</p>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="Phillips.paul.email@gmail.com">
-                <input type="hidden" name="item_name" value="Long Beach Island The Coloring Book">
-                <input type="hidden" name="amount" value="10.00">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="hidden" name="shipping" value="3.00">
-                <input type="hidden" name="shipping2" value="1.00">
-                <input type="hidden" name="handling" value="0.00">
-                <input type="hidden" name="undefined_quantity" value="1">
-                <input type="hidden" name="shipping_address" value="1">
-                <input type="hidden" name="address_override" value="1">
-                <input type="hidden" name="no_note" value="1">
-                <input type="hidden" name="no_shipping" value="2">
-                <input type="hidden" name="return" value="YOUR_RETURN_URL">
-                <input type="hidden" name="cancel_return" value="YOUR_CANCEL_URL">
-                <input type="hidden" name="notify_url" value="YOUR_NOTIFY_URL">
-                <button type="submit" class="bg-white text-blue-500 px-6 py-3 rounded-full font-bold">Purchase Now</button>
-            </form>
+    <footer>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-white py-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Long Beach Island The Coloring Book. All rights reserved.</p>
-            <p>Follow us on 
-                <a href="#" class="text-blue-500">Facebook</a>, 
-                <a href="#" class="text-blue-500">Instagram</a>, 
-                <a href="#" class="text-blue-500">Twitter</a>.
-            </p>
-        </div>
+        <p>&copy; 2024 Long Beach Island Coloring Book. All rights reserved.</p>
     </footer>
-
-    <div class="fixed-buy-button">
-        <a href="#buy" class="bg-blue-500 text-white px-4 py-2 rounded-full font-bold">Buy Now</a>
+    <div class="interactive-area">
+        <a href="buy-now.html" class="fixed-btn">Buy Now</a>
     </div>
-
-    <script>
-        // Lightbox functionality
-        function openLightbox(img) {
-            document.getElementById('lightbox').style.display = 'block';
-            document.getElementById('lightbox-img').src = img.src;
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.gallery img').forEach(img => {
-                img.addEventListener('click', function() {
-                    openLightbox(this);
-                });
-            });
-            document.querySelector('.lightbox').addEventListener('click', closeLightbox);
-        });
-
-        // Cursor interaction
-        const interactiveArea = document.getElementById('interactive-area');
-        document.addEventListener('mousemove', function(e) {
-            interactiveArea.style.top = e.pageY + 'px';
-            interactiveArea.style.left = e.pageX + 'px';
-            interactiveArea.style.display = 'block';
-        });
-
-        document.addEventListener('touchmove', function(e) {
-            const touch = e.touches[0];
-            interactiveArea.style.top = touch.pageY + 'px';
-            interactiveArea.style.left = touch.pageX + 'px';
-            interactiveArea.style.display = 'block';
-        });
-
-        document.addEventListener('mouseleave', function() {
-            interactiveArea.style.display = 'none';
-        });
-
-        document.addEventListener('touchend', function() {
-            interactiveArea.style.display = 'none';
-        });
-    </script>
 </body>
 </html>
