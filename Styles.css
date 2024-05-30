@@ -1,170 +1,57 @@
-/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #fff, #ccc);
+    animation: backgroundAnimation 10s infinite;
 }
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    background: #333;
-    color: #fff;
+@keyframes backgroundAnimation {
+    0% { background-color: #e0f7fa; }
+    33% { background-color: #b2ebf2; }
+    66% { background-color: #80deea; }
+    100% { background-color: #e0f7fa; }
 }
 
-header img {
-    height: 50px;
+nav a img {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+nav a img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.hero .banner {
-    background: url('assets/banner.jpg') no-repeat center center;
-    background-size: cover;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.hero .btn {
-    background: #007bff;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Buy Now Section */
-.buy-now {
-    padding: 2rem;
-    text-align: center;
-}
-
-.buy-now .btn {
-    background: #007bff;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;padding: 1rem;
-    text-align: center;
-}
-
-footer .social-media {
-    margin-bottom: 1rem;
-}
-
-footer .social-media a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 0.5rem;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Gallery Section */
-.gallery {
-    padding: 2rem;
-    text-align: center;
-}
-
-.gallery .slideshow img {
-    width: 100px;
-    height: 100px;
-    margin: 0.5rem;
-    cursor: pointer;
-}
-
-/* About Section */
-.about {
-    padding: 2rem;
-}
-
-.about .videos {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2rem;
-}
-
-.about iframe {
-    width: 45%;
-    height: 315px;
-}
-
-/* Coloring Preview Section */
-.coloring-preview {
-    padding: 2rem;
-    text-align: center;
-}
-
-.coloring-preview canvas {
-    border: 1px solid #000;
-    display: block;
-    margin: 0 auto;
-    background: #fff;
-}
-
-.coloring-preview .tools {
-    margin-top: 1rem;
-}
-
-.coloring-preview .tools input,
-.coloring-preview .tools button {
-    margin: 0.5rem;
-    padding: 0.5rem;
-}
-
-/* Interactive Area */
-.interactive-area .fixed-btn {
+.fixed-buy-button {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: #007bff;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: background-color 0.5s;
 }
 
 .interactive-area {
-    cursor: none;
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,0,255,0.5), rgba(255,0,0,0.5), rgba(255,20,147,0));
+    display: none;
 }
 
-.interactive-area::before {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: rgba(0, 123, 255, 0.5);
-    border-radius: 50%;
-    pointer-events: none;
-    transition: background 0.3s ease;
+h1, h2, h3, h4, h5, h6 {
+    animation: colorChange 5s infinite, glow 2s infinite;
+}
+
+@keyframes colorChange {
+    0% { color: #ff0000; }
+    25% { color: #00ff00; }
+    50% { color: #0000ff; }
+    75% { color: #ffff00; }
+    100% { color: #ff0000; }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff; }
+    50% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 75px #ff00ff; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff; }
 }
