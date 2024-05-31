@@ -1,4 +1,6 @@
-body {
+.alternate-color:nth-child(odd) a {
+    color: purple;
+}body {
     font-family: 'Arial', sans-serif;
 }
 
