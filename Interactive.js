@@ -1,47 +1,32 @@
-// Interactive coloring on canvas
-const canvas = document.getElementById('coloringCanvas');
-const ctx = canvas.getContext('2d');
-let painting = false;
-
-function startPosition(e) {
-    painting = true;
-    draw(e);
-}
-
-function endPosition() {
-    painting = false;
-    ctx.beginPath();
-}
-
-function draw(e) {
-    if (!painting) return;
-    ctx.lineWidth = 5;
-    ctx.lineCap = 'round';
-    ctx.strokeStyle = 'blue';
-
-    ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
-}
-
-canvas.addEventListener('mousedown', startPosition);
-canvas.addEventListener('mouseup', endPosition);
-canvas.addEventListener('mousemove', draw);
-
-// Save canvas as image
 function saveCanvas() {
-    const link = document.createElement('a');
-    link.download = 'coloring.png';
+    let canvas = document.getElementById('coloringCanvas');
+    let link = document.createElement('a');
     link.href = canvas.toDataURL();
+    link.download = 'coloring.png';
     link.click();
 }
 
-// Lightbox initialization
-document.addEventListener('DOMContentLoaded', function () {
-    lightbox.option({
-        'resizeDuration': 200,
-        'wrapAround': true,
-        'fadeDuration': 300
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    let canvas = document.getElementById('coloringCanvas');
+    let ctx = canvas.getContext('2d');
+
+    canvas.addEventListener('mousemove', function(event) {
+        let rect = canvas.getBoundingClientRect();
+        let x = event.clientX - rect.left;
+        let y = event.clientY - rect.top;
+        ctx.fillStyle = 'rgba(255,0,0,0.5)';
+        ctx.fillRect(x - 10, y - 10, 20, 20);
+    });
+
+    document.querySelectorAll('.gallery a').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+            document.getElementById('lightbox-img').src = item.href;
+            document.getElementById('lightbox').style.display = 'block';
+        });
     });
 });
