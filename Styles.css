@@ -8,19 +8,16 @@ header {
     color: white;
 }
 
-h1 {
-    font-size: 4rem;
+h1, h2, nav a, .btn, .fixed-buy-button a {
+    font-size: 2rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: black;
+    text-shadow: 2px 2px 4px gold, -2px -2px 4px silver;
 }
 
-nav a {
-    color: #FFD700;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #FFA500;
+nav a:hover, .btn:hover, .fixed-buy-button a:hover {
+    color: #FFD700; /* Gold */
+    text-shadow: 2px 2px 4px silver, -2px -2px 4px gold;
 }
 
 footer {
@@ -110,4 +107,66 @@ body {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.btn-home {
+    background-image: url('https://i.imgur.com/buezB5n.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: transparent;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.btn-home:hover {
+    color: black;
+}
+
+.btn-gallery {
+    background-image: url('https://i.imgur.com/buezB5n.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: transparent;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.btn-gallery:hover {
+    color: black;
+}
+
+.btn-purchase {
+    background-image: url('https://i.imgur.com/MiF9Z3M.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: transparent;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.btn-purchase:hover {
+    color: black;
+}
+
+.fixed-paypal-button {
+    background-image: url('https://i.imgur.com/6ICPJv8.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.fixed-paypal-button:hover {
+    transform: scale(1.2);
 }
