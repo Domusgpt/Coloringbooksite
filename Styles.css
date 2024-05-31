@@ -1,6 +1,4 @@
-.alternate-color:nth-child(odd) a {
-    color: purple;
-}body {
+body {
     font-family: 'Arial', sans-serif;
 }
 
@@ -8,6 +6,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
+    height: 300px; /* Adjust the height of the header */
 }
 
 h1 {
@@ -165,4 +164,8 @@ nav a:hover img, .fixed-buy-button:hover img {
 
 .alternate-color:nth-child(even) a {
     color: aquamarine;
+}
+
+.alternate-color:nth-child(odd) a {
+    color: purple;
 }
