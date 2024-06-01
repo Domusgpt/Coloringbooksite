@@ -109,7 +109,7 @@ body {
 .button-text {
     display: inline-flex;
     align-items: center;
-    color: purple;
+    color: white;
     text-shadow: 0 0 5px aquamarine, 0 0 10px silver;
     font-weight: bold;
     padding: 10px;
@@ -121,9 +121,10 @@ body {
 }
 
 .button-img {
+    width:.button-img {
     width: 40px; /* Double the size for larger buttons */
     height: 40px; /* Double the size for larger buttons */
-    margin-right: 10px; /* Increased margin for larger buttons */
+    margin-bottom: 5px; /* Margin for centering label below */
 }
 
 .fixed-buy-button img {
@@ -168,4 +169,11 @@ nav a:hover img, .fixed-buy-button:hover img {
 
 .alternate-color:nth-child(odd) a {
     color: purple;
+}
+
+.button-label {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
 }
