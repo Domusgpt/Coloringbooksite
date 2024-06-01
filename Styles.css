@@ -121,7 +121,6 @@ body {
 }
 
 .button-img {
-    width:.button-img {
     width: 40px; /* Double the size for larger buttons */
     height: 40px; /* Double the size for larger buttons */
     margin-bottom: 5px; /* Margin for centering label below */
@@ -176,4 +175,22 @@ nav a:hover img, .fixed-buy-button:hover img {
     font-size: 1em;
     font-weight: bold;
     color: white;
+}
+
+.pulsating-text {
+    animation: pulsate 2s infinite;
+}
+
+@keyframes pulsate {
+    0% { color: yellow; }
+    25% { color: neon green; }
+    50% { color: metallic; }
+    75% { color: white; }
+    100% { color: yellow; }
+}
+
+.footer-text {
+    color: purple;
+    font-weight: bold;
+    text-shadow: 0 0 5px aquamarine, 0 0 10px silver;
 }
