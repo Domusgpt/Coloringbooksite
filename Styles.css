@@ -112,6 +112,7 @@ footer {
     color: aquamarine;
     text-shadow: 0 0 5px purple, 0 0 10px silver;
     font-weight: bold;
+    font-size: 1.33em; /* Increase header text size by 33% */
 }
 
 .button-text {
@@ -129,8 +130,8 @@ footer {
 }
 
 .button-img {
-    width: 40px;
-    height: 40px;
+    width: 60px; /* Increase button size by 50% */
+    height: 60px; /* Increase button size by 50% */
     margin-bottom: 5px;
     transition: transform 0.3s ease;
 }
@@ -140,8 +141,8 @@ footer {
 }
 
 .fixed-buy-button img {
-    width: 30px;
-    height: 30px;
+    width: 45px; /* Increase buy button size by 50% */
+    height: 45px; /* Increase buy button size by 50% */
 }
 
 nav a img, .fixed-buy-button img {
@@ -185,7 +186,7 @@ nav a:hover img, .fixed-buy-button:hover img {
 
 .button-label {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.33em; /* Increase button label text size by 33% */
     font-weight: bold;
     color: white;
 }
@@ -195,13 +196,13 @@ nav a:hover img, .fixed-buy-button:hover img {
 }
 
 @keyframes pulsate {
-    0% { color: green; }
+    0% { color: neonpink; }
     16.67% { color: black; }
     33.33% { color: yellow; }
     50% { color: black; }
     66.67% { color: white; }
     83.33% { color: black; }
-    100% { color: green; }
+    100% { color: neonpink; }
 }
 
 .footer-text {
