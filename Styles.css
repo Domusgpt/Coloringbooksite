@@ -1,21 +1,12 @@
 body {
     font-family: 'Arial', sans-serif;
-    animation: gradient-bg 10s ease infinite;
-    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4);
-    background-size: 600% 600%;
-}
-
-@keyframes gradient-bg {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 header {
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    height: 300px; /* Adjust the height of the header */
+    height: 300px;
 }
 
 h1 {
@@ -64,28 +55,16 @@ footer {
 }
 
 .gallery img {
-    max-width: 400px; /* Double the size for larger images */
-    margin: 20px; /* Increased margin for larger images */
+    max-width: 400px;
+    margin: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 5px solid orange; /* Added crayon-like border */
+    border: 5px solid orange;
     border-radius: 10px;
 }
 
 .gallery img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes color-change {
-    0% { background-color: #00f; }
-    25% { background-color: #0f0; }
-    50% { background-color: #f00; }
-    75% { background-color: #ff0; }
-    100% { background-color: #00f; }
-}
-
-body {
-    animation: color-change 10s infinite;
 }
 
 .lightbox-content {
@@ -150,9 +129,9 @@ body {
 }
 
 .button-img {
-    width: 40px; /* Double the size for larger buttons */
-    height: 40px; /* Double the size for larger buttons */
-    margin-bottom: 5px; /* Margin for centering label below */
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
     transition: transform 0.3s ease;
 }
 
@@ -216,13 +195,13 @@ nav a:hover img, .fixed-buy-button:hover img {
 }
 
 @keyframes pulsate {
-    0% { color: yellow; }
+    0% { color: green; }
     16.67% { color: black; }
-    33.33% { color: neon green; }
+    33.33% { color: yellow; }
     50% { color: black; }
-    66.67% { color: metallic; }
+    66.67% { color: white; }
     83.33% { color: black; }
-    100% { color: yellow; }
+    100% { color: green; }
 }
 
 .footer-text {
@@ -234,23 +213,4 @@ nav a:hover img, .fixed-buy-button:hover img {
 .crayon-border {
     border: 5px solid orange;
     border-radius: 10px;
-}
-
-/* Custom Cursor */
-body {
-    cursor: url('https://i.imgur.com/Xm7JQSH.png'), auto;
-}
-
-a:hover {
-    cursor: url('https://i.imgur.com/oXHpboC.png'), auto;
-}
-
-/* Parallax Section */
-.parallax {
-    background-image: url('https://i.imgur.com/drWfHpu.png');
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
