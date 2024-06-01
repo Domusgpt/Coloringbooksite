@@ -214,3 +214,22 @@ nav a:hover img, .fixed-buy-button:hover img {
     border: 5px solid orange;
     border-radius: 10px;
 }
+
+/* Custom Cursor */
+body {
+    cursor: url('https://i.imgur.com/Xm7JQSH.png'), auto;
+}
+
+a:hover {
+    cursor: url('https://i.imgur.com/oXHpboC.png'), auto;
+}
+
+/* Parallax Section */
+.parallax {
+    background-image: url('https://i.imgur.com/drWfHpu.png');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
