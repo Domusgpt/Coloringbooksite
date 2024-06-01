@@ -1,5 +1,14 @@
 body {
     font-family: 'Arial', sans-serif;
+    animation: gradient-bg 10s ease infinite;
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4);
+    background-size: 600% 600%;
+}
+
+@keyframes gradient-bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 header {
@@ -17,17 +26,21 @@ h1 {
 
 nav a {
     color: #FFD700;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
     color: #FFA500;
+    transform: scale(1.1);
 }
 
 footer {
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
+    padding: 20px;
+    font-size: 1.2em;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .fixed-buy-button {
@@ -35,18 +48,32 @@ footer {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 .gallery img {
     max-width: 400px; /* Double the size for larger images */
     margin: 20px; /* Increased margin for larger images */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 5px solid orange; /* Added crayon-like border */
     border-radius: 10px;
 }
 
 .gallery img:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes color-change {
@@ -126,6 +153,11 @@ body {
     width: 40px; /* Double the size for larger buttons */
     height: 40px; /* Double the size for larger buttons */
     margin-bottom: 5px; /* Margin for centering label below */
+    transition: transform 0.3s ease;
+}
+
+.button-img:hover {
+    transform: scale(1.2) rotate(10deg);
 }
 
 .fixed-buy-button img {
@@ -202,4 +234,23 @@ nav a:hover img, .fixed-buy-button:hover img {
 .crayon-border {
     border: 5px solid orange;
     border-radius: 10px;
+}
+
+/* Custom Cursor */
+body {
+    cursor: url('https://i.imgur.com/Xm7JQSH.png'), auto;
+}
+
+a:hover {
+    cursor: url('https://i.imgur.com/oXHpboC.png'), auto;
+}
+
+/* Parallax Section */
+.parallax {
+    background-image: url('https://i.imgur.com/drWfHpu.png');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
