@@ -41,6 +41,8 @@ footer {
     max-width: 400px; /* Double the size for larger images */
     margin: 20px; /* Increased margin for larger images */
     transition: transform 0.3s ease;
+    border: 5px solid orange; /* Added crayon-like border */
+    border-radius: 10px;
 }
 
 .gallery img:hover {
@@ -178,14 +180,16 @@ nav a:hover img, .fixed-buy-button:hover img {
 }
 
 .pulsating-text {
-    animation: pulsate 2s infinite;
+    animation: pulsate 3s infinite;
 }
 
 @keyframes pulsate {
     0% { color: yellow; }
-    25% { color: neon green; }
-    50% { color: metallic; }
-    75% { color: white; }
+    16.67% { color: black; }
+    33.33% { color: neon green; }
+    50% { color: black; }
+    66.67% { color: metallic; }
+    83.33% { color: black; }
     100% { color: yellow; }
 }
 
@@ -193,4 +197,9 @@ nav a:hover img, .fixed-buy-button:hover img {
     color: purple;
     font-weight: bold;
     text-shadow: 0 0 5px aquamarine, 0 0 10px silver;
+}
+
+.crayon-border {
+    border: 5px solid orange;
+    border-radius: 10px;
 }
