@@ -61,8 +61,21 @@ nav li:nth-child(odd) {
 
 /* Video Container */
 .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 840px;
+    margin: 0 auto;
     background-size: cover;
     background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
 }
 
 /* Footer Styles */
