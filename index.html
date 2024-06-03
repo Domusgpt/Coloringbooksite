@@ -109,8 +109,7 @@
             // Form Submission
             document.querySelector('button[onclick="sendEmail()"]').addEventListener('click', function() {
                 const request = document.getElementById('customRequest').value;
-                if (request.trim() === '') {
-                    alert('Please enter your request.');
+                if (request.trim()alert('Please enter your request.');
                     return;
                 }
                 alert('Your request has been sent!');
