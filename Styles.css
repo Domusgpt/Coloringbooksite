@@ -6,139 +6,129 @@ body {
 
 /* Header Styles */
 header {
+    background-image: url('images/header-background.png');
     background-size: cover;
     background-position: center;
 }
 
-/* Navigation Buttons */
+/* Navigation */
 nav ul {
     display: flex;
     justify-content: space-between;
-    padding: 0;
-    list-style: none;
+    align-items: center;
 }
 
 nav li {
     flex: 1;
     text-align: center;
-    background-color: aquamarine;
+    transition: background-color 0.3s;
 }
 
-nav li:nth-child(odd) {
-    background-color: purple;
-}
-
-.button-img {
-    display: block;
-    margin: 0 auto;
-    width: 66%; /* Reduce size by 33% */
-    height: 66%; /* Reduce size by 33% */
-}
-
-.button-label {
-    display: block;
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: -10px;
-}
-
-/* Main Content */
-.text-box {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.header-box {
-    background-color: turquoise;
-    color: purple;
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 2em;
+nav li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Video Container */
 .video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 840px;
-    margin: 0 auto;
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    border-radius: 10px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
 }
 
 .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
+    height: 100%;
 }
 
 /* Footer Styles */
 footer {
+    background-image: url('images/footer-background.png');
     background-size: cover;
     background-position: center;
 }
 
-.footer-text {
-    background-color: purple;
-    color: aquamarine;
-    font-family: 'Cursive', sans-serif;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-    margin: 5px 0;
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
-/* Lightbox Styles */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Custom Fonts */
+@font-face {
+    font-family: 'Cursive';
+    src: url('fonts/cursive-font.ttf') format('truetype');
+}
+
+.font-cursive {
+    font-family: 'Cursive', cursive;
+}
+
+/* Gallery Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.grid img {
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
 }
 
-.lightbox img {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+.grid img:hover {
+    transform: scale(1.05);
 }
 
-.lightbox .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+/* Custom Request Form */
+#customRequest {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
 }
 
-.lightbox .close:hover,
-.lightbox .close:focus {
-    color: #bbb;
-    text-decoration: none;
+#customRequest:focus {
+    outline: none;
+    border-color: #4299e1;
+}
+
+button {
+    background-color: #4299e1;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Animation for Pulsating Text */
-@keyframes pulsate {
-    0% { color: yellow; }
-    33% { color: black; }
-    66% { color: neon-green; }
-    100% { color: white; }
+button:hover {
+    background-color: #3182ce;
 }
 
-.pulsating-text {
-    animation: pulsate 2s infinite;
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
